@@ -14,10 +14,7 @@ const blogsSchema = new mongoose.Schema({
         ref: "user",
         required: true
     },
-    category:{
-        type:String,
-        required: true
-    },
+    
     deletedAt:
     {
         type:Date
