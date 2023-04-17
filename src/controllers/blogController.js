@@ -1,5 +1,5 @@
 const blogModel = require("../models/blogModel")
-let moment = require('moment')
+
 const jwt = require("jsonwebtoken")
 const { isValidObjectId } = require("mongoose")
 
@@ -78,7 +78,7 @@ const updateBlogData = async function (req, res) {
 const deleteByParams = async function (req, res) {
   try {
     let userId = req.params.blogId;
-    console.log(userId)
+   
     if (!isValidObjectId(userId))
       return res.status(400).send({ status: false, message: "Please Enter Correct valid objectId" })
     let checkBlog = await blogModel.findById(userId)
