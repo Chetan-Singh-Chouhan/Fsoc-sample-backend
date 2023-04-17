@@ -7,9 +7,9 @@ const authentication = async function (req, res, next) {
     next()
   }
   catch (err) {
-    return res.status(401).send("UnAuthenticated, Please Login First")
+    res.status(401).send("UnAuthenticated, Please Login First")
 
   }
 }
 
-module.exports = { authentication }
+module.exports= {authentication}

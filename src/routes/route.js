@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { createUser, userLogin } = require('../controllers/userController');
 const { createblog, getblog, updateBlogData, deleteByParams } = require("../controllers/blogController")
-const authentication = require('../middlewares/middleware')
+const {authentication} = require('../middlewares/middleware')
 
 router.post("/register", createUser); // createUser
 router.post("/login", userLogin); //register user
